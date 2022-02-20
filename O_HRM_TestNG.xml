@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<suite name = "OrangeHRM">
+
+<listeners>
+
+  <listener class-name = "com.O_HRM.Utilities.Reporting"/>
+  
+ </listeners>
+
+
+<test name = "ChromeTest">
+
+
+<classes>
+
+  <class name = "com.O_HRM.TestCases.TestCase_LoginTest_001"/>
+
+</classes>
+
+
+
+
+
+
+
+
+
+
+</test>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</suite>
