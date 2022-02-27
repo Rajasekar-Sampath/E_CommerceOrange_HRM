@@ -62,11 +62,6 @@ public class ReadConfig {
 		return firefoxpath;
 	}
 	
-	public String getBrowser() {
-		
-		String browser  = configProp.getProperty("chrome");
-		return browser;
-	}
 	
 	
 

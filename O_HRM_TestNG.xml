@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-
-<suite name = "OrangeHRM">
+<suite name = "OrangeHRM" >
 
 <listeners>
 
@@ -11,11 +11,17 @@
 
 
 <test name = "ChromeTest">
+<parameter name = "browser" value = "chrome"/>
 
 
 <classes>
 
-  <class name = "com.O_HRM.TestCases.TestCase_LoginTest_001"/>
+  <!--  <class name = "com.O_HRM.TestCases.TestCase_LoginTest_001"/>
+  <class name = "com.O_HRM.TestCases.TestCase_SearchName_002"/> 
+  <class name = "com.O_HRM.TestCases.TestCase_AddEmployee_003"/>
+  <class name = "com.O_HRM.TestCases.TestCase_Reports_004"/>-->
+  <class name = "com.O_HRM.TestCases.TestCase_Leave_005"/>
+
 
 </classes>
 
