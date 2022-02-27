@@ -3,12 +3,13 @@ package com.O_HRM.TestCases;
 import java.io.IOException;
 
 import org.testng.Assert;
+import org.testng.annotations.Test;
 
 import com.O_HRM.pageObjectModel.LoginPage;
 
 public class TestCase_LoginTest_001 extends BaseClass {
 	
-	
+	@Test
 	public void LoginTest() throws IOException {
 		
 		LP = new LoginPage(driver);

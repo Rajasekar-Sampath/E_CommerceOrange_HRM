@@ -15,10 +15,15 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-
+import org.testng.annotations.Parameters;
 
 import com.O_HRM.Utilities.ReadConfig;
+import com.O_HRM.pageObjectModel.AddEmployee;
+import com.O_HRM.pageObjectModel.Admin;
 import com.O_HRM.pageObjectModel.LoginPage;
+import com.O_HRM.pageObjectModel.P_Reports;
+import com.O_HRM.pageObjectModel.PersonalDetails;
+import com.O_HRM.pageObjectModel.leavesPortal;
 
 public class BaseClass {
 	
@@ -30,27 +35,33 @@ public class BaseClass {
 	public String baseURL = readconfig.getApplication();
 	public String username = readconfig.setUsername();
 	public String password = readconfig.setPassword();
-	public String br = readconfig.getBrowser();
+	
 	
 	public LoginPage LP;
+	public Admin AD;
+	public AddEmployee AE;
+	public PersonalDetails PD;
+	public P_Reports PR;
+	public leavesPortal lP;
 	
 	@BeforeClass
-	public void setup(String browser) {
+	@Parameters("browser")
+	public void setup(String br) {
 		
 		logger = Logger.getLogger("E-Commerce_OrangeHRM");
 		PropertyConfigurator.configure("Log4j.properties");
 	
-		if(browser.equals("chrome")) {
+		if(br.equals("chrome")) {
 			
 			System.setProperty("webdriver.chrome.driver",readconfig.getChromepath());
 			driver = new ChromeDriver();
 		}
-		else if(browser.equals("ie")) {
+		else if(br.equals("ie")) {
 			
 			System.setProperty("webdriver.ie.driver",readconfig.getIEpath());
 			driver = new InternetExplorerDriver();
 		}
-		else if(browser.equals("firefox")) {
+		else if(br.equals("firefox")) {
 			
 			System.setProperty("webdriver.gecko.driver",readconfig.getFirefoxpath());
 		}
@@ -59,16 +70,20 @@ public class BaseClass {
 		
 		driver.get(baseURL);
 		
+		driver.manage().window().maximize();
+		
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		
 		logger.info("********Application Launched***********");
+		
+		
 		
 		
 }
 	@AfterClass
 	public void tearDown() {
 		
-		driver.quit();
+		//driver.quit();
 	}
 	
 	public void CaptureScreenshot(WebDriver driver, String Screenshotname) throws IOException {
