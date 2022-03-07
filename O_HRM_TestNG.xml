@@ -19,8 +19,10 @@
   <!--  <class name = "com.O_HRM.TestCases.TestCase_LoginTest_001"/>
   <class name = "com.O_HRM.TestCases.TestCase_SearchName_002"/> 
   <class name = "com.O_HRM.TestCases.TestCase_AddEmployee_003"/>
-  <class name = "com.O_HRM.TestCases.TestCase_Reports_004"/>-->
-  <class name = "com.O_HRM.TestCases.TestCase_Leave_005"/>
+  <class name = "com.O_HRM.TestCases.TestCase_Reports_004"/>
+  <class name = "com.O_HRM.TestCases.TestCase_Leave_005"/>  -->
+  <class name = "com.O_HRM.TestCases.TestCase_LeaveFindingEmp_006"/>
+  
 
 
 </classes>

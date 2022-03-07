@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-OrangeHRM" class="navigator-link">
-              <span class="suite-name border-passed">OrangeHRM</span>
+              <span class="suite-name border-failed">OrangeHRM</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,21 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-OrangeHRM" class="hide-methods passed suite-OrangeHRM"> (hide)</a> <!-- hide-methods passed suite-OrangeHRM -->
-                      <a href="#" panel-name="suite-OrangeHRM" class="show-methods passed suite-OrangeHRM"> (show)</a> <!-- show-methods passed suite-OrangeHRM -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-OrangeHRM" class="hide-methods failed suite-OrangeHRM"> (hide)</a> <!-- hide-methods failed suite-OrangeHRM -->
+                      <a href="#" panel-name="suite-OrangeHRM" class="show-methods failed suite-OrangeHRM"> (show)</a> <!-- show-methods failed suite-OrangeHRM -->
                     </span>
-                    <div class="method-list-content passed suite-OrangeHRM">
+                    <div class="method-list-content failed suite-OrangeHRM">
                       <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-OrangeHRM" title="com.O_HRM.TestCases.TestCase_Leave_005" class="method navigator-link" hash-for-method="leaveportal">leaveportal</a> <!-- method navigator-link -->
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-OrangeHRM" title="com.O_HRM.TestCases.TestCase_LeaveFindingEmp_006" class="method navigator-link" hash-for-method="findingEmp">findingEmp</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-OrangeHRM -->
+                    </div> <!-- method-list-content failed suite-OrangeHRM -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -117,21 +117,41 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-OrangeHRM" class="panel OrangeHRM">
-          <div class="suite-OrangeHRM-class-passed">
+          <div class="suite-OrangeHRM-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.O_HRM.TestCases.TestCase_Leave_005</span>
+              <img src="failed.png"/>
+              <span class="class-name">com.O_HRM.TestCases.TestCase_LeaveFindingEmp_006</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="leaveportal">
-                  </a> <!-- leaveportal -->
-                  <span class="method-name">leaveportal</span>
+                  <a name="findingEmp">
+                  </a> <!-- findingEmp -->
+                  <span class="method-name">findingEmp</span>
+                  <div class="stack-trace">org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=99.0.4844.51)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;SAMPATH&apos;, ip: &apos;192.168.43.201&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.51, chrome: {chromedriverVersion: 98.0.4758.80 (7f0488e8ba0d8..., userDataDir: C:\Users\91894\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:60139}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 37b31c44abd57a8ec829f33eaa008b8d
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.getText(RemoteWebElement.java:166)
+	at com.O_HRM.pageObjectModel.L_Reports.findWanted(L_Reports.java:103)
+	at com.O_HRM.TestCases.TestCase_LeaveFindingEmp_006.findingEmp(TestCase_LeaveFindingEmp_006.java:40)
+... Removed 30 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-OrangeHRM-class-passed -->
+          </div> <!-- suite-OrangeHRM-class-failed -->
         </div> <!-- panel OrangeHRM -->
         <div panel-name="test-xml-OrangeHRM" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -148,7 +168,7 @@
   &lt;test thread-count=&quot;5&quot; name=&quot;ChromeTest&quot;&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.O_HRM.TestCases.TestCase_Leave_005&quot;/&gt;
+      &lt;class name=&quot;com.O_HRM.TestCases.TestCase_LeaveFindingEmp_006&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- ChromeTest --&gt;
 &lt;/suite&gt; &lt;!-- OrangeHRM --&gt;
@@ -190,14 +210,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'leaveportal')
-data.setCell(0, 2, 'com.O_HRM.TestCases.TestCase_Leave_005')
-data.setCell(0, 3, 19153);
+data.setCell(0, 1, 'findingEmp')
+data.setCell(0, 2, 'com.O_HRM.TestCases.TestCase_LeaveFindingEmp_006')
+data.setCell(0, 3, 16560);
 window.suiteTableData['OrangeHRM']= { tableData: data, tableDiv: 'times-div-OrangeHRM'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 19 seconds</span>
+              <span class="suite-total-time">Total running time: 16 seconds</span>
               <div id="times-div-OrangeHRM">
               </div> <!-- times-div-OrangeHRM -->
             </div> <!-- times-div -->
@@ -223,18 +243,20 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.O_HRM.TestCases.TestCase_Leave_005</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.O_HRM.TestCases.TestCase_LeaveFindingEmp_006</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setup(chrome)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">leaveportal</span>
-                <span class="method-start">7674 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">findingEmp</span>
+                <span class="method-start">9980 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">26840 ms</span>
+                <span class="method-start">26565 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -1,6 +1,7 @@
 package com.O_HRM.pageObjectModel;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -68,17 +69,22 @@ public class leavesPortal {
 	@FindBy(xpath = "//input[@id ='dialogConfirmBtn']")
 	@CacheLookup
 	WebElement confirm;
+	
+	
 
 	public void mouseEntitlement() {
 
 		Actions act = new Actions(ldriver);
-
+		
+       //act.doubleClick(Entitlement).build().perform();
+	  //act.moveToElement(Entitlement).doubleClick().build().perform();
 		act.moveToElement(Entitlement).moveToElement(addLvEntitle).click().build().perform();
 	}
 
 	public void clkCheckbox() {
 
 		checkclk.click();
+		
 	}
 
 	public void selectLocation() {
@@ -121,20 +127,11 @@ public class leavesPortal {
 	}
 
 	
-	 public void MatchingEmps(String value) {
-
-		for (WebElement s : matchemps) {
-
-			String Actual = s.getText();
-			
-
-			if (Actual.equals(value)) {
-				System.out.println("Actual equals value");
-				confirm.click();
-				break;
-			}
-		}
-	}
+	 /*public void MatchingEmps() {
+		 
+		 
+		 
 	
 
+}*/
 }
