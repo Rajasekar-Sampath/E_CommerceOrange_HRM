@@ -20,6 +20,7 @@ import org.testng.annotations.Parameters;
 import com.O_HRM.Utilities.ReadConfig;
 import com.O_HRM.pageObjectModel.AddEmployee;
 import com.O_HRM.pageObjectModel.Admin;
+import com.O_HRM.pageObjectModel.L_Reports;
 import com.O_HRM.pageObjectModel.LoginPage;
 import com.O_HRM.pageObjectModel.P_Reports;
 import com.O_HRM.pageObjectModel.PersonalDetails;
@@ -43,6 +44,7 @@ public class BaseClass {
 	public PersonalDetails PD;
 	public P_Reports PR;
 	public leavesPortal lP;
+	public L_Reports LR;
 	
 	@BeforeClass
 	@Parameters("browser")
